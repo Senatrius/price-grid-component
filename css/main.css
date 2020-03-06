@@ -1,13 +1,139 @@
-@import url("https://fonts.googleapis.com/css?family=Karla:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Karla:200,400,700&display=swap");
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
 }
 
 body {
-  font-family: 'Karla', sans-serif;
-  font-size: 62.5%;
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  background: #e5eff5;
+}
+
+.container {
+  width: 50%;
+  max-width: 900px;
+  background: white;
+  margin: 10% auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-auto-rows: -webkit-min-content;
+  grid-auto-rows: min-content;
+      grid-template-areas: "cta cta" "signup reasons";
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0rem 0.5rem 1.5rem rgba(96, 154, 177, 0.2);
+          box-shadow: 0rem 0.5rem 1.5rem rgba(96, 154, 177, 0.2);
+}
+
+.section {
+  padding: 2.5rem;
+}
+
+.section .title {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.section .subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.section .yellow-text {
+  color: #c0df34;
+}
+
+.section .text {
+  line-height: 1.5;
+}
+
+.section .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section .cost {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-right: 0.75rem;
+}
+
+.section .term {
+  font-size: 1rem;
+  color: #e5eff5;
+}
+
+.section .btn {
+  width: 100%;
+  padding: 1rem;
+  background: #c0df34;
+  color: white;
+  display: block;
+  margin-top: 1.5rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 0rem 0.5rem 1.5rem rgba(25, 25, 25, 0.15);
+          box-shadow: 0rem 0.5rem 1.5rem rgba(25, 25, 25, 0.15);
+}
+
+.section__cta {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: cta;
+  color: #2ab2af;
+}
+
+.section__signup {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: signup;
+  color: white;
+  background: #2ab2af;
+  border-radius: 0 0 0 0.5rem;
+}
+
+.section__reasons {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: reasons;
+  color: white;
+  background: #4bbebc;
+  border-radius: 0 0 0.5rem 0;
+}
+
+.section__reasons .item {
+  font-size: 0.85rem;
+  font-weight: 200;
+}
+
+.section__reasons .item:not(:last-child) {
+  margin-bottom: 0.3rem;
+}
+
+@media only screen and (max-width: 710px) {
+  .container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "cta" "signup" "reasons";
+    margin: 20% auto;
+    width: 90%;
+  }
+  .section__signup {
+    border-radius: 0;
+  }
+  .section__reasons {
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */
